@@ -1,0 +1,22 @@
+//Create a database medicare2
+
+create database medicare2;
+use medicare2;
+
+//Create a login table
+CREATE TABLE Login (
+    emailid VARCHAR(255) PRIMARY KEY,
+    password VARCHAR(255),
+    typeofuser VARCHAR(255),
+    FOREIGN KEY (emailid) REFERENCES User(emailid)
+);
+
+//Create a product table
+CREATE TABLE Product (
+    pid INT AUTO_INCREMENT PRIMARY KEY,
+    pname VARCHAR(255),
+    price FLOAT,
+    url VARCHAR(255),
+    description VARCHAR(255),
+    type VARCHAR(255)
+);
